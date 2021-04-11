@@ -1,0 +1,745 @@
+{% extends 'base.html' %}
+{% block main %}
+{% load static %}
+
+ 	<section class="homebanner layer-overlay overlay-dark-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-12 col-sm-12">
+					<div class="invisible" style="height:70px">height</div>
+				</div>
+				<div class="col-12 col-md-5 offset-md-1 col-sm-12">
+					<div class="ret wow bounceInLeft">
+					<h1 class="h1bannertitle d-none d-md-block d-lg-block">Experience with convenience</h1>
+					<h2 class="h2bannertitle d-none d-md-block d-lg-block">Choose High Quality Recycled OEM Parts</h2>
+					</div>
+				</div>
+				<div class="col-12 col-md-5 col-sm-12 divblk">
+					<div class="form-block">
+						<div class="form-title">
+							<div class="form-titleh1">Find A Part Now</div>
+						</div>
+						<form id="qapform" class="form-custom">
+							<div class="blk">
+								<div class="form-group row">
+									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-block qap_make" alt="Arrow for Required">
+									<label for="qap_make" class="col-2 col-form-label">Make <span class="text-danger">*</span></label>
+									<div class="col-10">
+										<select name="qap_make" id="qap_make" class="form-control">
+											<option value="">Select Make</option>
+											
+												<option value="AMC">AMC</option>
+											
+												<option value="Acura">Acura</option>
+											
+												<option value="Alfa-Romeo">Alfa-Romeo</option>
+											
+												<option value="Audi">Audi</option>
+											
+												<option value="BMW">BMW</option>
+											
+												<option value="British-Leyland">British-Leyland</option>
+											
+												<option value="Buick">Buick</option>
+											
+												<option value="Cadillac">Cadillac</option>
+											
+												<option value="Chevy">Chevy</option>
+											
+												<option value="Chrysler">Chrysler</option>
+											
+												<option value="Cooper">Cooper</option>
+											
+												<option value="Daewoo">Daewoo</option>
+											
+												<option value="Daihatsu">Daihatsu</option>
+											
+												<option value="Dodge">Dodge</option>
+											
+												<option value="Eagle">Eagle</option>
+											
+												<option value="Fiat-Lancia">Fiat-Lancia</option>
+											
+												<option value="Ford">Ford</option>
+											
+												<option value="GM">GM</option>
+											
+												<option value="GMC">GMC</option>
+											
+												<option value="Honda">Honda</option>
+											
+												<option value="Hummer">Hummer</option>
+											
+												<option value="Hyundai">Hyundai</option>
+											
+												<option value="Infiniti">Infiniti</option>
+											
+												<option value="International">International</option>
+											
+												<option value="Isuzu">Isuzu</option>
+											
+												<option value="Jaguar">Jaguar</option>
+											
+												<option value="Jeep">Jeep</option>
+											
+												<option value="Land-Rover">Land-Rover</option>
+											
+												<option value="Lexus">Lexus</option>
+											
+												<option value="Lincoln">Lincoln</option>
+											
+												<option value="Mazda">Mazda</option>
+											
+												<option value="Mercedes-Benz">Mercedes-Benz</option>
+											
+												<option value="Mercury">Mercury</option>
+											
+												<option value="Mitsubishi">Mitsubishi</option>
+											
+												<option value="Nissan">Nissan</option>
+											
+												<option value="Oldsmobile">Oldsmobile</option>
+											
+												<option value="Opel">Opel</option>
+											
+												<option value="Peugeot">Peugeot</option>
+											
+												<option value="Plymouth">Plymouth</option>
+											
+												<option value="Pontiac">Pontiac</option>
+											
+												<option value="Porsche">Porsche</option>
+											
+												<option value="Renault">Renault</option>
+											
+												<option value="Rover">Rover</option>
+											
+												<option value="Saab">Saab</option>
+											
+												<option value="Saturn">Saturn</option>
+											
+												<option value="Scion">Scion</option>
+											
+												<option value="Subaru">Subaru</option>
+											
+												<option value="Suzuki">Suzuki</option>
+											
+												<option value="Toyota">Toyota</option>
+											
+												<option value="Volkswagen">Volkswagen</option>
+											
+												<option value="Volvo">Volvo</option>
+											
+												<option value="Yugo">Yugo</option>
+											
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_model" alt="Arrow for Required">
+									<label for="qap_model" class="col-2 col-form-label">Model <span class="text-danger">*</span></label>
+									<div class="col-10">
+										<select name="qap_model" id="qap_model" class="form-control">
+											<option value="">Select Model</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_part" alt="Arrow for Required">
+									<label for="qap_part" class="col-2 col-form-label">Part <span class="text-danger">*</span></label>
+									<div class="col-10">
+										<select name="qap_part" id="qap_part" class="form-control">
+											<option value="">Select Part</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_year" alt="Arrow for Required">
+									<label for="qap_year" class="col-2 col-form-label">Year <span class="text-danger">*</span></label>
+									<div class="col-10">
+										<select name="qap_year" id="qap_year" class="form-control">
+											<option value="">Select Year</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-7 offset-md-5 col-sm-12 text-right">
+									<button type="button" name='find' id='find' class="btn btn-custom">Search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="form-banner-contact">
+						<h2><a href="tel:1-888-418-3631">1-866-293-3731</a></h2>
+						<h3>CALL NOW TO ORDER</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<div class="container-lg">
+	<h2>Test</h2>
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+		<section class="mt-4">
+		<div class="container continer">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 coldivbk wow fadeInRight">
+					<div class="col-12 div-parts-block lineargradient1">
+						<div class="partpic partpic-drivetrain">
+						</div>
+						<div class="col-12 div-parts-block-content">
+							<div class="div-parts-blockh1">DRIVETRAIN</div>
+							<div class="div-parts-blockh2">PARTS</div>
+							<p class="col-md-8 col-sm-12 p-0">Quality Used Engine & Transmission Parts sold as complete assemblies</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<a href="Part-List/DriveTrain.html" class="btn btn-custom">Know More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 coldivbk wow fadeInLeft">
+					<div class="col-12 div-parts-block lineargradient2">
+						<div class="partpic partpic-autobody">
+						</div>
+						<div class="col-12 div-parts-block-content">
+							<div class="div-parts-blockh1">AUTO BODY</div>
+							<div class="div-parts-blockh2">PARTS</div>
+							<p class="col-md-8 col-sm-12 p-0">Quality Used Auto Body Parts that make your car look road-worthy</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<a href="Part-List/AutoBody.html" class="btn btn-custom">Know More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 coldivbk wow fadeInRight">
+					<div class="col-12 div-parts-block lineargradient2">
+						<div class="partpic partpic-mechanicalcar">
+						</div>
+						<div class="col-12 div-parts-block-content">
+							<div class="div-parts-blockh1">MECHANICAL CAR</div>
+							<div class="div-parts-blockh2">PARTS</div>
+							<p class="col-md-8 col-sm-12 p-0">Quality Used Mechanical Car Parts that get you back on the road for less money</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<a href="Part-List/Mechanical.html" class="btn btn-custom">Know More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 coldivbk wow fadeInLeft">
+					<div class="col-12 div-parts-block lineargradient1">
+						<div class="partpic partpic-electriccar">
+						</div>
+						<div class="col-12 div-parts-block-content">
+							<div class="div-parts-blockh1">ELECTRICAL CAR</div>
+							<div class="div-parts-blockh2">PARTS</div>
+							<p class="col-md-8 col-sm-12 p-0">Everything from an ECM, Engine Computer and Electronic Control Modules to fix your car</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<a href="Part-List/Electrical.html" class="btn btn-custom">Know More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="homewelcomebanner parallax layer-overlay overlay-blue mdhight">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-10 offset-1">
+					<div class="caption">
+						<div class="captionh1">WELCOME</div>
+						<div class="captionh4">TO OUR STORE!</div>
+					</div>
+					<div class="content">
+						<p>Quality Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
+						<p>We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
+					</div>
+					<div class="col-md-2 offset-md-5 col-sm-12 mt-5">
+						<a class="btn btn-custom" href="aboutus.php.html">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>		<section class="sectionppdt">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 caption mt-3 mb-3">
+					<div class="captionh1 text-black">PRODUCTS</div>
+					<div class="captionh4 text-black mb-3">MOST POPULAR!</div>
+				</div>
+				<div class="col-12">
+					<div class="responsive slider">
+						
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Head-Light')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/head-light.png' %}" alt="Headlamp Assembly">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Headlamp Assembly</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Strut')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/noimages.png' %}" alt="Strut">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Strut</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Front-Door-Glass')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/front-door-glass.png' %}" alt="Door Glass   Front Doors">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Door Glass - Front Doors</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Front-Window-Regulator')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/front-window-regulator.png' %}" alt="Door Window Regulator   Front">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Door Window Regulator - Front</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Blower-Motor')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/blower-motor.png' %}" alt="Blower Motor">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Blower Motor Cowl</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Computer')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/computer.png' %}" alt="Electronic Chassis Control Module">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Electronic Chassis Control Module Electronic Modules</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Cylinder-Head')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/cylinder-head.png' %}" alt="Cylinder Head">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Cylinder Head Engine</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Engine')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/engine.png' %}" alt="Engine Assembly">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Engine Assembly Engine</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Rear-Door-Asm')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/noimages.png' %}" alt="Door Assembly   Rear or Back">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Door Assembly - Rear or Back</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Spindle-Knuckle-Front')">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/spindle-knuckle-front.png' %}" alt="Spindle/Knuckle   Front">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Spindle/Knuckle - Front</div>					
+																				
+									</div>
+								</div>
+							</div>
+						</div>	
+						 
+				  </div>
+			  </div>
+				
+			</div>
+		</div>
+	</section>	<section class="ourservicebanner parallax layer-overlay overlay-dark-8 mdhight">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-10 offset-1">
+					<div class="caption">
+						<div class="captionh1">SERVICES</div>
+						<div class="captionh4">MILLIONS OF QUALITY USED OEM PARTS</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 at wow fadeInLeft">
+					<div class="col-3 float-left">
+						<div class="rounddiv wow rollIn ">
+							<i class="fas fa-hand-holding-usd"></i>
+						</div>
+					</div>
+					<div class="col-8 rounddiv rounddivtext float-left">
+						<div class="rounddivtexth1">Quick Quotes that save you money</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 at wow fadeInLeft">
+					<div class="col-3 float-left">
+						<div class="rounddiv wow rollIn ">
+							<i class="fas fa-percent"></i>
+						</div>
+					</div>
+					<div class="col-8 rounddiv rounddivtext float-left">
+						<div class="rounddivtexth1">Save over 50% off dealer prices</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 at wow fadeInLeft">
+					<div class="col-3 float-left">
+						<div class="rounddiv wow rollIn ">
+							<i class="fas fa-truck"></i>
+						</div>
+					</div>
+					<div class="col-8 rounddiv rounddivtext float-left">
+						<div class="rounddivtexth1">Fast delivery to your home or mechanic</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 at wow fadeInLeft">
+					<div class="col-3 float-left">
+						<div class="rounddiv wow rollIn ">
+							<i class="fas fa-car"></i>
+						</div>
+					</div>
+					<div class="col-8 rounddiv rounddivtext float-left">
+						<div class="rounddivtexth1">home or mechanic We service all major makes
+						<a href='index.htm-1.html' class=' d-none'></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		<section class="mb-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 caption custom-mt-50">
+					<div class="captionh1 text-black">BLOG</div>
+					<div class="captionh4 text-black mb-3">READ OUR AUTO RELATED ARTICLES!</div>
+				</div>
+
+				
+				<div class="col-md-6 col-sm-12">
+					<div class="blogdiv mt-2">
+						<div class="blogdiv-image">
+							<img src="{% static 'images/resources-carcare.jpg.jfif' %}" alt="Part 1">
+						</div>
+						<div class="blogdiv-content">
+							<h2>Car Care</h2>					
+							<p></p>
+							<div class="col-md-4 col-sm-6 p-0">
+								<a href="Resources/Car-Care.html" class="btn btn-custom">Read More..</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-sm-12">
+					<div class="blogdiv mt-2">
+						<div class="blogdiv-image">
+							<img src="{% static 'images/tyre_wheel1.jpg.jfif' %}" alt="Part 1">
+						</div>
+						<div class="blogdiv-content">
+							<h2>Tire and Wheels</h2>					
+							<p></p>
+							<div class="col-md-4 col-sm-6 p-0">
+								<a href="Resources/Tires-and-Wheels.html" class="btn btn-custom">Read More..</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section> 	<section class="testimonialdiv lineargradient1">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 caption custom-mt-50">
+					<h5 class="text-white mb-4">What Our Happy Clients say about us</h5>
+					<div class="captionh1 text-white">TESTIMONIAL</div>
+					<div class="col-md-3 col-sm-4 m-auto"><hr></div>
+					<h5 class="text-white mt-4 mb-4">The highest standards. The happiest customers.<br> Rated by store owner</h5>
+				</div>
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators d-none">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						
+						
+						<div class="carousel-item active">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>Very good service, I received excellent quality parts both times. Yes I will recommend your company for sure. I'd rate Quality Auto Parts a 10 out of 10. THANK YOU!!!</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Louis </h5>
+									<h5>SALEM, MA</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I would rate Quality Auto Parts a 10, because your people worked diligently to make sure the order was correct, and the part I ordered was delivered on time. </p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Peter </h5>
+									<h5>DAMASCUS, MD</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I will give Quality Auto Parts a 10 out of 10!! Because you got back to me right away and made sure you had the right part for me!! Yes I would recommend your company to my friends and family.</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Mitchell R</h5>
+									<h5>CEDAR PARK, TX</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I'd rate Quality Auto Parts a 10 out of 10. Not only that, I intend use your services again. I was impressed with a particular staff's tendency to do exactly what he said he would and exactly when he said he would do it. I will try to reach him personally again when I call back in the near future.
+</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Maria V</h5>
+									<h5>CORNERSVILLE, TN</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>Quality Auto Parts is the only company in the USA that was able to get me the exact OEM part for my Mercedes. This company is the only one that actually checked the exact part number for an exact replacement. I went through numerous companies and no one can guarantee the part number except Quality Auto Parts. Im completely satisfied with the customer service, the part being the exact fit and the delivery time. I will purchase from them again if needed in the future.</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Pacita K</h5>
+									<h5>LAKEWOOD, WA</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I have to give you a 10 out of 10. You really have professional people working for you. Your people strive to excel providing excellent service. For me this is wonderful because you are dealing with people that make you feel good. Yes, I will recommend your company to my families and friends; it is very difficult to find a company like yours these days. Good luck to you, to your employees and company. </p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Osvaldo</h5>
+									<h5>MIAMI, FL</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I would recommend your company to people I know who are in need of auto electrical computers. I was pleased with your service although I was a bit unsure for the first several days whether or not you actually had the part I needed. As it turned out, you did locate the part and sent it to me. Thanks for your service. </p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Terry</h5>
+									<h5>MT ULLA, NC</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I was impressed; my mechanic couldn't get the part. But here with Quality Auto Parts it was ease to order and receive the product. I have bookmarked your site for my mechanic. Definitely I will rate you 10. Thank you!!</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Claretta </h5>
+									<h5>PHILADELPHIA, PA</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>I would give a score of 10. I had a very helpful and pleasant experience with the person that helped me with getting the right car part and I would send new customers. Thank you for excellent service.</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Shirley</h5>
+									<h5>ALBUQUERQUE, NM</h5>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item ">
+							<div class="col-md-8 offset-md-2 col-sm-12">
+								<div class="testimonial-content">
+									<p>After talking to your staff I realized that his business communication capabilities were superb as well as the skills in the first man. And you had the data base and information down to a single bolt. So good it was hard to believe but I know now it was true. So I would recommend your company as the company to contact as it provides the very best service.
+</p>
+								</div> 
+								<div class="testimonial-speaks">
+									<h5>Stephen S</h5>
+									<h5>SPRINGFIELD, OR</h5>
+								</div>
+							</div>
+						</div>
+						
+
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>					 
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+<section class="partnersdiv">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+				   <div class="regular slider">
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/acura.jpg.jfif' %}" alt="ACURA">
+							</div>
+						</div>
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/alfa-romeo.png' %}" alt="ALFA-ROMEO">
+							</div>
+						</div>
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/AMC.jpg.jfif' %}" alt="AMC">
+							</div>
+						</div>
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/audi.png' %}" alt="AUDI">
+							</div>
+						</div>
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/BMW.png' %}" alt="BMW">
+							</div>
+						</div>
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/British-Leyland.png' %}" alt="BRITISH-LEYLAND">
+							</div>
+						</div>
+						<div>
+							<div class="item">
+								<img src="{% static 'images/partnerslogos/Cooper.png' %}" alt="COOPER">
+							</div>
+						</div>
+				   </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+
