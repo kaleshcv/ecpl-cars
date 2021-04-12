@@ -157,6 +157,7 @@ select {
 	top: -6px;
 }
 .form-block {
+
 	background:black;
 	opacity:60%;
 	color:white;
@@ -259,6 +260,7 @@ select {
 	font-weight:100;
 }
 .arrowrequired {
+    margin-left:100px;
 	left:2px;
     position: absolute;
 	display:none;
@@ -276,7 +278,7 @@ select {
 .lineargradient3 {	
 	background: #0e9cde;
 	background: -webkit-linear-gradient(to right, #0e9cde, #4b14d9f5);
-	background: linear-gradient(to right,  #0e9cde, #4b14d9f5);
+	background: linear-gradient(to right, #00202f, #185f68);
 }
 .div-parts-block {	
 	width:100%;
@@ -1106,7 +1108,7 @@ select {
     top: 60%;
 }
 .h1bannertitle {
-	background: rgba(0, 0, 0, 0.75);
+	background: rgba(0, 0, 0, 0);
     color: #fff;
     width: auto;
     padding: 8px 8px;
@@ -1118,7 +1120,7 @@ select {
 	margin-bottom:3px;
 }
 .h2bannertitle {
-	background: rgba(0, 0, 0, 0.75);
+	background: rgba(0, 0, 0, 0);
     color: #fff;
     width: auto;
     padding: 8px 8px;
