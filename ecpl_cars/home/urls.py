@@ -8,5 +8,6 @@ urlpatterns = [
     path('webhook',webhook),
     path('find-parts',findParts),
     path('thanks-page',thanksPage),
+    path('hub-test',hubspotTest),
 
 ]
