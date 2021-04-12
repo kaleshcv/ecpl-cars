@@ -15,7 +15,9 @@ def indexPage(request):
 
 def webhook(request):
     jsondata=request.body
+    data={'text':jsondata}
 
     print(jsondata)
+    return render(request,'sample-chat.html',data)
 
 
