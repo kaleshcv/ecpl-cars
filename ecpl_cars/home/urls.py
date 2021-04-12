@@ -5,5 +5,6 @@ from .views import *
 urlpatterns = [
 
     path('index',indexPage),
+    path('webhook',webhook),
 
 ]

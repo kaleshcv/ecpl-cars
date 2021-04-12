@@ -5,3 +5,9 @@ from django.shortcuts import render
 
 def indexPage(request):
     return render(request,'index.html')
+
+def webhook(request):
+    if request.method=='POST':
+        print('DOne-------')
+    else:
+        print('Error')
