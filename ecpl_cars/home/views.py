@@ -16,23 +16,15 @@ def indexPage(request):
 @require_POST
 
 def webhook(request):
+
     jsondata=request.body
 
-    #data=json.loads(jsondata)
+    data=json.loads(jsondata)
 
-    #print(data)
-
-    endpoint = 'https://api.hubapi.com/contacts/v1/contact/?hapikey=a41d69da-80ea-4bec-ad26-efe730f9c7d2'
-    headers = {}
-
-    headers["Content-Type"] = "application/json"
-
-
-    r = requests.post(url=endpoint, data=jsondata, headers=headers)
-
-    print(r.text)
+    print(data)
 
     return HttpResponse(status=200)
+
 
 def findParts(request):
     if request.method== 'POST':
@@ -65,31 +57,31 @@ def hubspotTest(request):
       "properties": [
         {
           "property": "email",
-          "value": "testingapis@hubspot.com"
+          "value": "kaleshcv2@gmail.com"
         },
         {
           "property": "firstname",
-          "value": "test"
+          "value": "kalesh"
         },
         {
           "property": "lastname",
-          "value": "testerson"
+          "value": "cv"
         },
         {
           "property": "website",
-          "value": "http://hubspot.com"
+          "value": "http://ecpl.com"
         },
         {
           "property": "company",
-          "value": "HubSpot"
+          "value": "ECPL"
         },
         {
           "property": "phone",
-          "value": "555-122-2323"
+          "value": "112333444"
         },
         {
           "property": "address",
-          "value": "25 First Street"
+          "value": "test"
         },
         {
           "property": "city",
@@ -97,11 +89,11 @@ def hubspotTest(request):
         },
         {
           "property": "state",
-          "value": "MA"
+          "value": "CA"
         },
         {
           "property": "zip",
-          "value": "02139"
+          "value": "1234"
         }
       ]
     })
