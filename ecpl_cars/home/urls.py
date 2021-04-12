@@ -6,5 +6,7 @@ urlpatterns = [
 
     path('index',indexPage),
     path('webhook',webhook),
+    path('find-parts',findParts),
+    path('thanks-page',thanksPage),
 
 ]
