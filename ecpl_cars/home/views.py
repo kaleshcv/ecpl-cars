@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 # Create your views here.
 
@@ -6,8 +9,13 @@ from django.shortcuts import render
 def indexPage(request):
     return render(request,'index.html')
 
+
+@csrf_exempt
+@require_POST
+
 def webhook(request):
-    if request.method=='POST':
-        print('DOne-------')
-    else:
-        print('Error')
+    jsondata=request.body
+
+    print(jsondata)
+
+
