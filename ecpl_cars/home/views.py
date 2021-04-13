@@ -11,6 +11,12 @@ from django.views.decorators.http import require_POST
 def indexPage(request):
     return render(request,'index.html')
 
+def aboutUs(request):
+    return render(request,'about-us.html')
+
+def customerService(request):
+    return render(request,'customer-service.html')
+
 
 @csrf_exempt
 @require_POST
@@ -20,10 +26,41 @@ def webhook(request):
     jsondata=request.body
 
     data=json.loads(jsondata)
+    print('-------------------------------')
+    #print(data['pre_chat_survey'])
+    datalist=data['pre_chat_survey']
+    contact_list=[]
+    for i in datalist:
+        print(i['answer'])
+        contact_list.append(i['answer'])
 
-    print(data)
+    print(contact_list)
+
+    p1={"property": "email",
+          "value": contact_list[1]}
+    p2={
+          "property": "firstname",
+          "value": contact_list[0]
+        }
+
+    data_to_dump={'properties':[p1,p2]}
+
+    print('----------------')
+    print(data_to_dump)
+
+    endpoint = 'https://api.hubapi.com/contacts/v1/contact/?hapikey=a41d69da-80ea-4bec-ad26-efe730f9c7d2'
+    headers = {}
+    headers["Content-Type"] = "application/json"
+    data = json.dumps(data_to_dump)
+
+    r = requests.post(url=endpoint, data=data, headers=headers)
+
+    print(r.text)
+
 
     return HttpResponse(status=200)
+
+
 
 
 def findParts(request):

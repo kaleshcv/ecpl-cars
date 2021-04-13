@@ -120,9 +120,11 @@ select {
 }
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
     color: #000;
+
 }
 .navbar-dark .navbar-nav .nav-link {
     color: #000;
+
 }
 .homewelcomebanner {
 	background-image:url(../images/qap-homewelcome.jpg.jfif);
@@ -1228,6 +1230,7 @@ select {
 		font-weight: 500;
 		padding: .3rem .5rem !important;
 		font-size: 13px;
+
 	}
 	.cstbanner * .col-md-6 {
 		margin-top:10px;
@@ -1737,6 +1740,7 @@ select {
 	}
 	.custom-nav .active .nav-link {
 		border-radius:0px;
+		background:grey;
 	}
 	.h3qttxt { 
 		font-size:12pt;
@@ -1850,6 +1854,8 @@ select {
 	}
 	.custom-nav .active .nav-link {
 		border-radius:0px;
+		background:grey;
+
 	}
 	.logodefault img {
 		width:180px;

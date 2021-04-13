@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block main %}
 {% load static %}
-
-
+		<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
  	<section class="homebanner layer-overlay overlay-dark-5">
 		<div class="container-fluid">
 			<div class="row">
@@ -12,7 +11,7 @@
 				<div class="col-12 col-md-5 offset-md-1 col-sm-12">
 					<div class="ret wow bounceInLeft">
 					<h1 class="h1bannertitle d-none d-md-block d-lg-block">Experience with convenience</h1>
-					<h2 class="h2bannertitle d-none d-md-block d-lg-block">Choose High Quality Recycled OEM Parts</h2>
+					<h2 class="h2bannertitle d-none d-md-block d-lg-block">Choose High Quality used OEM Parts</h2>
 					</div>
 				</div>
 				<div class="col-12 col-md-5 col-sm-12 divblk">
@@ -24,6 +23,19 @@
 							{% csrf_token %}
 							<div class="blk">
 								<div class="form-group row">
+									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_year" alt="Arrow for Required">
+									<label for="qap_year" class="col-2 col-form-label">Year <span class="text-danger">*</span></label>
+									<div class="col-10">
+										<select name="year" id="qap_year" class="form-control">
+											<option value="">Select Year</option>
+											<option value="2020">2020</option>
+											<option value="2019">2019</option>
+											<option value="2018">2018</option>
+											<option value="2017">2017</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
 									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-block qap_make" alt="Arrow for Required">
 									<label for="qap_make" class="col-2 col-form-label">Make <span class="text-danger">*</span></label>
 									<div class="col-10">
@@ -31,10 +43,10 @@
 											<option value="">Select Make</option>
 
 												<option value="Audi">Audi</option>
-											
+
 												<option value="BMW">BMW</option>
 
-											
+
 										</select>
 									</div>
 								</div>
@@ -70,20 +82,9 @@
 										</select>
 									</div>
 								</div>
-								<div class="form-group row">
-									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_year" alt="Arrow for Required">
-									<label for="qap_year" class="col-2 col-form-label">Year <span class="text-danger">*</span></label>
-									<div class="col-10">
-										<select name="year" id="qap_year" class="form-control">
-											<option value="">Select Year</option>
-											<option value="2020">2020</option>
-											<option value="2019">2019</option>
-											<option value="2018">2018</option>
-											<option value="2017">2017</option>
-										</select>
-									</div>
-								</div>
+
 							</div>
+
 							<div class="form-group row">
 								<button class="button btn-secondary" style="position: relative;margin-left: 50%">Search</button>
 							</div>
@@ -631,6 +632,7 @@
 			</div>
 		</div>
 	</section>
+
 
 {% endblock %}
 
