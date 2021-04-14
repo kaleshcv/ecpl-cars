@@ -42,8 +42,12 @@ def webhook(request):
           "property": "firstname",
           "value": contact_list[0]
         }
+    p3={
+          "property": "phone",
+          "value": contact_list[2]
+        }
 
-    data_to_dump={'properties':[p1,p2]}
+    data_to_dump={'properties':[p1,p2,p3]}
 
     print('----------------')
     print(data_to_dump)
