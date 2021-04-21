@@ -55,11 +55,10 @@ def webhook(request):
 def findParts(request):
     if request.method== 'POST':
         make=request.POST['make']
-        model=request.POST['model']
         part= request.POST['part']
         year=request.POST['year']
 
-        data={'make':make,'model':model,'part':part,'year':year}
+        data={'make':make,'part':part,'year':year}
 
         return render(request,'find-parts.html',data)
 
@@ -67,6 +66,39 @@ def findParts(request):
         pass
 
 def thanksPage(request):
+
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        phone=request.POST['phone']
+        year=request.POST['year']
+
+        p1 = {
+            "property": "email",
+            "value": email}
+        p2 = {
+            "property": "firstname",
+            "value": name}
+
+        p3 = {
+            "property": "phone",
+            "value": phone}
+
+        p4 = {
+            "property": "year",
+            "value": year}
+
+        endpoint = 'https://api.hubapi.com/contacts/v1/contact/?hapikey=a41d69da-80ea-4bec-ad26-efe730f9c7d2'
+        headers = {}
+        headers["Content-Type"] = "application/json"
+        data = json.dumps({
+            "properties": [p1,p2,p3]
+        })
+
+        r = requests.post(url=endpoint, data=data, headers=headers)
+    else:
+        pass
+
 
     return render(request, 'thanks-page.html')
 

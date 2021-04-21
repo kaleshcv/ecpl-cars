@@ -280,7 +280,7 @@ select {
 .lineargradient3 {	
 	background: #0e9cde;
 	background: -webkit-linear-gradient(to right, #0e9cde, #4b14d9f5);
-	background: linear-gradient(to right, #00202f, #185f68);
+	background: linear-gradient(to right, #000000, #042433);
 }
 .div-parts-block {	
 	width:100%;
@@ -505,7 +505,7 @@ select {
 .rounddiv {
     font-size: 43px;
     line-height: 54px;
-    color: #fbdd12;
+    color: lightskyblue;
     font-weight: 400;
     text-transform: uppercase;
     overflow: hidden;
@@ -528,7 +528,7 @@ select {
     line-height: 120px;
     text-align: center;
     color: #000;
-    background: #fbdd12;
+    background: lightskyblue;
     border-radius: 120px;
     width: 120px;
     margin-right: 30px;
