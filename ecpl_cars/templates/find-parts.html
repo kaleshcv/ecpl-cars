@@ -24,28 +24,28 @@
 									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-block qap_make" alt="Arrow for Required">
 									<label for="qap_make" class="col-2 col-form-label">Name <span class="text-danger">*</span></label>
 									<div class="col-10">
-                                        <input type="text" name="name" class="form-control">
+                                        <input type="text" name="name" class="form-control" required>
 									</div>
 								</div>
 								<div class="form-group row">
 									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_model" alt="Arrow for Required">
 									<label for="qap_model" class="col-2 col-form-label">Phone <span class="text-danger">*</span></label>
 									<div class="col-10">
-										<input type="text" name="phone" class="form-control">
+										<input type="number" name="phone" class="form-control" required>
 									</div>
 								</div>
 								<div class="form-group row">
 									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_part" alt="Arrow for Required">
 									<label for="qap_part" class="col-2 col-form-label">E-Mail <span class="text-danger">*</span></label>
 									<div class="col-10">
-										<input type="text" name="email" class="form-control">
+										<input type="email" name="email" class="form-control" required>
 									</div>
 								</div>
 								<div class="form-group row">
 									<img src="{% static 'images/arrow.png' %}" class="arrowrequired d-none qap_year" alt="Arrow for Required">
 									<label for="qap_year" class="col-2 col-form-label">Zip <span class="text-danger">*</span></label>
 									<div class="col-10">
-										<input type="text" name="zip" class="form-control">
+										<input type="number" name="zip" class="form-control" required>
 										<input type="hidden" name="year" value="{{year}}">
 										<input type="hidden" name="make" value="{{make}}">
 										<input type="hidden" name="part" value="{{part}}">
