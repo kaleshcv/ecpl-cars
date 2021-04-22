@@ -2284,4 +2284,11 @@ select {
 #pmsg span {background:#dadada;border-radius:50%;width: 15px;float:left;line-height: 15px;height: 15px;padding: 0px 0 0px 0;text-align:center;position:absolute;font-weight:bold;right: 2px;top: 2px;font-size: 10px;cursor: pointer;}
 
 }
-   
+
+
+.call-today-div{
+   background-image:url(../images/b1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
