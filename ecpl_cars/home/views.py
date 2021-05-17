@@ -24,32 +24,14 @@ def partRequest(request):
 @require_POST
 
 def webhook(request):
-    jsondata=request.body
-    data=json.loads(jsondata)
-    datalist=data['pre_chat_survey']
-    contact_list=[]
-    for i in datalist:
-        contact_list.append(i['answer'])
-    p1={
-        "property": "email",
-        "value": contact_list[1]}
-    p2={
-          "property": "firstname",
-          "value": contact_list[0]
-        }
-    p3={
-          "property": "phone",
-          "value": contact_list[2]
-        }
 
-    data_to_dump={'properties':[p1,p2,p3]}
+    if request.method == 'POST':
+        jsondata=request.body
+        print(jsondata)
+        return HttpResponse(status=200)
 
-    endpoint = 'https://api.hubapi.com/contacts/v1/contact/?hapikey=a41d69da-80ea-4bec-ad26-efe730f9c7d2'
-    headers = {}
-    headers["Content-Type"] = "application/json"
-    data = json.dumps(data_to_dump)
-    r = requests.post(url=endpoint, data=data, headers=headers)
-    return HttpResponse(status=200)
+    else:
+        pass
 
 
 def findParts(request):
