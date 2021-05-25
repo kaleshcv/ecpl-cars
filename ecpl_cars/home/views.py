@@ -55,7 +55,7 @@ def thanksPage(request):
         phone=request.POST['phone']
         year=request.POST['year']
 
-        p1 = {
+        '''p1 = {
             "property": "email",
             "value": email}
         p2 = {
@@ -77,7 +77,8 @@ def thanksPage(request):
             "properties": [p1,p2,p3]
         })
 
-        r = requests.post(url=endpoint, data=data, headers=headers)
+        r = requests.post(url=endpoint, data=data, headers=headers)'''
+
     else:
         pass
 
