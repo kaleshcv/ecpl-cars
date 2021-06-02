@@ -2296,3 +2296,7 @@ select {
 .blogs p {
     text-align:justify;
 }
+
+.btn-secondary:hover {
+    cursor:pointer;
+}
