@@ -143,3 +143,16 @@ def hubspotTest(request):
     r = requests.post( url = endpoint, data = data, headers = headers )
 
     #print(r.text)
+
+def resourcesPage(request):
+
+    return render(request,'resources.html')
+
+def blogOne(request):
+    return render(request,'blog-1.html')
+
+def blogTwo(request):
+    return render(request,'blog-2.html')
+
+def blogThree(request):
+    return render(request,'blog-3.html')

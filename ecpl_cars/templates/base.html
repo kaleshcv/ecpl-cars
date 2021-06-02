@@ -27,7 +27,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 		<!-- animate css -->
 		<link href="{% static 'css/animate.css' %}" rel="stylesheet">
 		<!-- slick css -->
@@ -44,7 +44,9 @@
 
 		<script src="https://kit.fontawesome.com/4a95aa7adc.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 
 		<script async="" src="{% static 'gtag/js?id=UA-120708795-1' %}"></script>
 		<script>
@@ -60,7 +62,7 @@
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
 
 		<img src="{% static 'images/car-logo.PNG' %}" alt="" style="width: 60px;height: 16px;">
-			<a class="navbar-brand logodefault" href="#" style="color: #181818;font-weight: 600;font-family: 'Reggae One', cursive;font-size: 14px;margin-left: 0px;margin-top: 2px">Quick Used Auto Parts</a>
+			<a class="navbar-brand logodefault" href="#" style="color: #181818;font-weight: 600;font-size: 24px;margin-left: 0px;margin-top: 2px">Quick Used Auto Parts</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -79,7 +81,7 @@
 					<a class="nav-link" href="/parts-request">Part Request</a>
 				</li>
 				<li class="nav-item resources">
-					<a class="nav-link" href="#">Resources</a>
+					<a class="nav-link" href="/resources">Resources</a>
 				</li>
 				<li class="nav-item customerservice">
 					<a class="nav-link" href="/customer-service">Customer Service</a>
@@ -91,7 +93,7 @@
 
 {% endblock %}
 
-    <section class="footercontactdiv lineargradient3">
+    <!--<section class="footercontactdiv lineargradient3">
 		<div class="container-fluid">
 			<div class="row classicvh">
 				<div class="col-md-6 col-sm-12">
@@ -132,6 +134,30 @@
 				</div>
 			</div>
 		</div>
+	</section> -->
+
+	<section id="footer-new" style="background: #042332;">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-md-6">
+					<div style="padding:20px">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.879485558074!2d-75.54473073533113!3d39.80969500025843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6fb59aab37417%3A0xad6fd5297b013d4b!2sWorldwide%20Incorporators!5e0!3m2!1sen!2sin!4v1622634928041!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-5">
+					<div style="margin-left:20px;color: #86ccf8;margin-top:50px">
+						<h4>Quick Used Auto Parts LLC</h4>
+						<small style="color: darkgray">3411 Silverside Road Tatnall Building #4 <br> Wilmington, DE 19810</small><br><br>
+						<p style="color: white"><i class="fa fa-envelope" aria-hidden="true" style="margin-right:10px"></i><i><a
+								 href = "mailto: sales@quickusedautoparts.com" style="color:white;">sales@quickusedautoparts.com</a></i></p>
+						<p style="color: white"><i class="fa fa-phone" aria-hidden="true" style="margin-right:10px"></i><a href="tel:1-833-583-2590" style="color:white;">1-833-583-2590</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</section>
 
 
@@ -139,7 +165,7 @@
 	<section class="footercopyrightdiv">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="copyrighttext m-auto"><p>Copyright � <script type="text/javascript">document.write(new Date().getFullYear());</script>. QuickUsedAutoParts.com. All Rights Reserved</p></div>
+				<div class="copyrighttext m-auto"><p>Copyright � <script type="text/javascript">document.write(new Date().getFullYear());</script>. www.quickusedautoparts.com. All Rights Reserved</p></div>
 			</div>
 		</div>
 	</section>

@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block main %}
 {% load static %}
+<div style="margin-top:50px">
 
-<section style="margin-top:100px">
+</div>
+<section style="background-image: url(static/images/home-banner.jpg) ">
 	<div class="container-lg">
-		<div class="row">
+		<div class="row" style="padding-top:50px;padding-bottom:50px">
 			<div class="col-md-6" style="padding:0px 50px">
 				<div>
                     <form class="form-custom" action="/thanks-page" enctype="multipart/form-data" method="POST">
@@ -2348,11 +2350,21 @@
 			</div>
 		</div>
 			<div class="col-md-6" style="padding:50px 50px;">
-				<section class="ourservicebanner parallax layer-overlay mdhight">
+				<section>
 					<div style="margin-left: 20px;">
-					<h2 class="animate__infinite infinite wow flash" style="color:white;margin-top:100px;">1-833-583-2590</h2>
+					<h4 style="color: lightskyblue">Toll Free Number</h4>
+					<h2 class="animate__infinite infinite wow flash"><a
+							href="tel:1-833-583-2590" style="color:white;">1-833-583-2590</a></h2>
 					<br>
+					<div>
+
+					</div>		
 					<p style="font-size: 24px;color:white;font-weight: 600;">Call today for the best part specialist experience with convenience guaranteed !!!</p>
+					</div>
+					<div style="margin-left:20px;color: navajowhite;margin-top:50px">
+						<p>Quick Used Auto Parts LLC</p>
+						<small>3411 Silverside Road Tatnall Building #4 <br> Wilmington, DE 19810</small>
+						<p style="color: darkgray"><i>sales@quickusedautoparts.com</i></p>
 					</div>
 
 				</section>
@@ -2361,6 +2373,162 @@
 	</div>
 
 </section>
+
+<section class="sectionppdt">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 caption mt-3 mb-3">
+					<div class="captionh4 text-black mb-3">MOST POPULAR</div>
+				</div>
+				<div class="col-12">
+					<div class="responsive slider">
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/head-light.png' %}" alt="Headlamp Assembly">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Headlamp Assembly</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/strut.jpg' %}" alt="Strut">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Strut</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/front-door.jpg' %}" alt="Door Glass   Front Doors">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Door Glass - Front Doors</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/front-window-regulator.png' %}" alt="Door Window Regulator   Front">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Door Window Regulator - Front</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/blower-motor.png' %}" alt="Blower Motor">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Blower Motor Cowl</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/computer.png' %}" alt="Electronic Chassis Control Module">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Electronic Chassis Control Module Electronic Modules</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/cylinder-head.png' %}" alt="Cylinder Head">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Cylinder Head Engine</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/engine.png' %}" alt="Engine Assembly">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Engine Assembly Engine</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/door-assembly.jpg' %}" alt="Door Assembly   Rear or Back">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Door Assembly - Rear or Back</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-md-12 col-sm-12 pdtdiv cursor">
+								<div class="popularpdt">
+									<div class="popularpdt-image">
+										<img src="{% static 'images/parts/spindle-knuckle-front.png' %}" alt="Spindle/Knuckle   Front">
+									</div>
+									<div class="popularpdt-content">
+										<div class="pdtname">Spindle/Knuckle - Front</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+				  </div>
+			  </div>
+
+			</div>
+		</div>
+	</section>
 
 
 

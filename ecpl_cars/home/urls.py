@@ -12,6 +12,10 @@ urlpatterns = [
     path('find-parts',findParts),
     path('thanks-page',thanksPage),
     path('hub-test',hubspotTest),
+    path('resources',resourcesPage),
+    path('blog-1',blogOne),
+    path('blog-2',blogTwo),
+    path('blog-3',blogThree),
 
 
 ]

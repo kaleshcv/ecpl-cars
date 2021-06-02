@@ -583,7 +583,7 @@ select {
     display: table;
     margin: 6px auto;
     border-radius: 50px;
-    border: 5px solid #ffec16;
+    border: 5px solid #232728;
 	padding: 8px 50px;
     top: 12px;
     position: inherit;
@@ -2291,4 +2291,8 @@ select {
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+}
+
+.blogs p {
+    text-align:justify;
 }
