@@ -4,6 +4,7 @@ from django.http import HttpResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
+from .models import *
 
 # Create your views here.
 
@@ -50,10 +51,18 @@ def findParts(request):
 def thanksPage(request):
 
     if request.method=='POST':
-        name=request.POST['name']
-        email=request.POST['email']
-        phone=request.POST['phone']
+        customer_name=request.POST['name']
+        customer_email=request.POST['email']
+        customer_phone=request.POST['phone']
+        customer_zip = request.POST['zip']
         year=request.POST['year']
+        make_model = request.POST['make']
+        part = request.POST['part']
+
+        lead = Leads.objects.create(customer_name=customer_name,customer_email=customer_email,
+                                    customer_phone=customer_phone,customer_zip=customer_zip,
+                                    year=year,make_model=make_model,part=part)
+        lead.save()
 
         '''p1 = {
             "property": "email",
