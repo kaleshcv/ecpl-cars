@@ -127,7 +127,7 @@ select {
 
 }
 .homewelcomebanner {
-	background-image:url(../images/qap-homewelcome.jpg.jfif);
+	background-image:url(../images/quap1.jpg);
 }
 .homebanner {
 	background-image:url(../images/home-banner.jpg);
@@ -227,7 +227,8 @@ select {
 	border:1px solid grey;
 }
 .btn-custom {
-	background:#17a2b8;
+	background:#fff
+	;
 	color:#000;
 	box-shadow: 0px 1px 2px #bbbbbb;
 	border:none;
@@ -2299,4 +2300,69 @@ select {
 
 .btn-secondary:hover {
     cursor:pointer;
+}
+.One .one{
+	background-color: #042433;
+    color: #fff;
+	padding:10px;
+	border: 1px solid white;
+	transition: .7s ease;
+}
+.One .one div{
+	margin: 60px 10px;
+}
+
+.One .one p{
+	text-align: justify;
+}
+.One .one:hover{
+	cursor: pointer;
+	background-color:black;
+	margin-top: -40px;
+	margin-bottom: 80px;
+	color: #fff;
+}
+
+.sectionppdt img{
+
+	width:200px;
+    height: 175px;
+	transition: .7s ease;
+}
+
+.sectionppdt .col-md-2 {
+
+	background-color: #fff;
+	margin: 10px;
+    box-shadow: 1px 1px 10px lightgrey;
+    padding: 30px 10px;
+
+}
+
+.sectionppdt .col-md-2 p{
+
+	margin-top:20px;
+
+}
+
+.sectionppdt .col-md-2:hover{
+
+	background-color: #fff;
+	margin: 10px;
+    box-shadow: 0px 0px 10px grey;
+    padding: 30px 10px;
+	cursor: pointer;
+
+}
+
+.sectionppdt .col-md-2:hover img {
+
+	width:210px;
+    height: 185px;
+}
+
+.homewelcomebanner h4 {
+
+	color: #ff5050;
+    text-shadow: 0 0 10px red;
 }
